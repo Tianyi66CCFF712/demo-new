@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>清新空气检测-微型气象站-便携式大气负氧离子检测仪-森林康养-朗净仪器</title>
+    <meta name="description"
+          content="廊坊朗净仪器有限公司致力于环境空气指数、微型气象站,仪器仪表研发,是集产品生产、销售、安装于一体的综合型企业。公司自主研发的清新空气检测、花粉自动监测仪等大气因子监测仪；辐射量监测等各业监测仪器产品广泛应用于森林康养、林业、气象、旅游景区、环境监测等行业">
+    <meta name="keywords"
+          content="负氧离子,负氧离子检测仪,清新空气检测,森林康养,负氧离子检测系统,微型气象站,便携式负氧离子检测仪,负氧离子厂家,花粉检测仪,大气负氧离子检测仪 ">
+    <link rel="stylesheet" th:href="@{/css/common.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/index.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/chanpin.css}" type="text/css">
+    <script th:src="@{/js/bundle.min.js}"></script>
+    <script async=""
+            th:src="@{/js/sensors_online_sa-sdk-javascript-1.25.3_sensorsdata.min.js}"
+            charset="UTF-8"></script>
+    <script type="text/javascript"
+            th:src="@{/js/jquery-v3.2.1.js}"></script>
+    <script type="text/javascript"
+            th:src="@{/js/index.js}"></script>
+    <script type="text/javascript"
+            th:src="@{/js/layer.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/layer.css}"
+          id="layuicss-layer">
+    <link rel="stylesheet" type="text/css"
+          th:href="@{/css/main.css}">
+</head>
+<body>
+<meta http-equiv="mobile-agent" content="format=xhtml;url=/m/index.php">
+<script type="text/javascript">if (window.location.toString().indexOf('pref=padindex') != -1) {
+} else {
+    if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+        if (window.location.href.indexOf("?mobile") < 0) {
+            try {
+                if (/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                    window.location.href = "/m/index.php";
+                } else if (/iPad/i.test(navigator.userAgent)) {
+                } else {
+                }
+            } catch (e) {
+            }
+        }
+    }
+}</script>
+
+
+<div class="header">
+
+    <div class="header_bot">
+
+        <div class="container clearfix">
+
+            <div class="logo fl"><a href="http://www.langjingyiqi.com/">
+                <img
+                        th:src="@{/images/20180412114926_77299.png}"></a>
+            </div>
+
+            <div class="xinxi fl">
+
+                <p class="p1">专业致力于环境空气指数、气象站，仪器仪表研发</p>
+
+                <p class="p2">为广大用户提供优质的产品和完善的服务</p>
+
+            </div>
+
+            <div class="tel fr">
+
+
+                <p class="p1"></p>
+
+                <p class="p2">服务热线：13871558551<br></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="nav">
+
+        <div class="container">
+
+            <ul class="clearfix">
+
+                <li><a href="/index" target="">网站首页</a></li>
+
+
+                <li><a href="/about">关于我们</a></li>
+
+
+                <li><a href="/chanpinzhanshi">产品展示</a></li>
+
+
+                <li><a href="/xinwen">新闻动态</a></li>
+
+
+                <li><a href="/anlizhanshi">案例展示</a></li>
+
+
+                <li><a href="/rongyu">资质荣誉</a></li>
+
+
+                <li><a href="/connect">联系我们</a></li>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="banner clearfix">
+    <!--轮播图用each遍历-->
+
+    <div class="bannerx" style="height: 491.866px;">
+        <ul class="bannerxList">
+            <li th:each="lunbotu, iterStat : ${lunbotu}"
+                th:style="${iterStat.last} ? '' : 'display: none;'">
+                <a href="javascript:void(0)">
+                    <img th:src="${lunbotu.image}"
+                         style="width: 1471px; height: 491.866px;"
+                         th:alt="${lunbotu.id}">
+                </a>
+            </li>
+        </ul>
+        <ul class="bannerxBton">
+        </ul>
+    </div>
+</div>
+<div class="chengxin">
+
+    <div class="container clearfix">
+
+        <div class="a1 fl">
+
+            <div class="b1">诚实<span>守信</span> 合作<span>共赢</span></div>
+
+            <div class="b2">Honest and trustworthy cooperation win win</div>
+
+        </div>
+
+        <div class="a2 fl clearfix">
+
+            <p class="p1 fl">关键词：</p>
+            <li style="display:inline;"><a href=""
+                                           class="fl"></a></li>
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+    function check_seachkey() {
+
+        var key = $("#seach_key").val();
+
+        if (!key) {
+
+            alert("请输入查询的关键词！！！");
+
+            return false;
+
+        }
+
+    }
+
+</script>
+
+<div class="main">
+    <div class="container clearfix">
+        <div class="viewmain">
+            <div class="vtitle">
+                <div class="vtitlemain"><font>The latest information</font> <span><b
+                        th:text="|${honor.name}|"></b></span></div>
+                <p class="telbar">service phone <font>13871558551</font></p>
+            </div>
+            <div class="fyMain">
+                <div class="viewcon">
+                    <h2 th:text="${honor.name}" class="center"></h2>
+                    <div class="title_s">
+                        <div th:text="|添加时间+${honor.updateTime}|" class="divleft"></div><br><br>
+                        <p class="center"><img th:src="|${honor.image}|"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+
+    <div class="container">
+
+        <ul class="nav clearfix">
+
+            <li><a href="/index" target="">网站首页</a></li>
+
+
+            <li><a href="/about">关于我们</a></li>
+
+
+            <li><a href="/chanpinzhanshi">产品展示</a></li>
+
+
+            <li><a href="/xinwen">新闻动态</a></li>
+
+
+            <li><a href="/anlizhanshi">案例展示</a></li>
+
+
+            <li><a href="/rongyu">资质荣誉</a></li>
+
+
+            <li><a href="/connect">联系我们</a></li>
+
+
+        </ul>
+
+
+        <div class="a2"></div>
+
+        <div class="a3"><p>
+
+                                <span style="line-height:2;">大气负氧离子检测仪-微型气象站-天然氧吧-森林康养-自动花粉监测仪-朗净仪器 版权所有(C)2018&nbsp;&nbsp; 备案号：<a
+                                        href="https://beian.miit.gov.cn/" target="_blank"><span
+                                        style="color:#FFFFFF;">冀ICP备17002451号</span></a> </span>
+
+        </p></div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript"
+        th:src="@{/js/jquery.toTop.min.js}"></script>
+
+<a id="GoTop"><img th:src="@{/images/下载.jpg}" alt=""></a>
+
+<script>
+
+    $(function () {
+
+        $('#GoTop').toTop();
+
+
+    });
+
+    $(function () {
+
+        $("#link_list3 li:not(':first,:last')").css({"width": "49%", "float": "left"});
+
+        $("#link_list3 li:last").css({"clear": "both"});
+
+    });
+
+</script>
+
+</body>
+</html>

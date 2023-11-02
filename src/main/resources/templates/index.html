@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>清新空气检测-微型气象站-便携式大气负氧离子检测仪-森林康养-朗净仪器</title>
+    <meta name="description"
+          content="廊坊朗净仪器有限公司致力于环境空气指数、微型气象站,仪器仪表研发,是集产品生产、销售、安装于一体的综合型企业。公司自主研发的清新空气检测、花粉自动监测仪等大气因子监测仪；辐射量监测等各业监测仪器产品广泛应用于森林康养、林业、气象、旅游景区、环境监测等行业">
+    <meta name="keywords"
+          content="负氧离子,负氧离子检测仪,清新空气检测,森林康养,负氧离子检测系统,微型气象站,便携式负氧离子检测仪,负氧离子厂家,花粉检测仪,大气负氧离子检测仪 ">
+    <link rel="stylesheet" th:href="@{/css/common.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/index.css}" type="text/css">
+    <script th:src="@{/js/bundle.min.js}"></script>
+    <script async=""
+            th:src="@{/js/sensors_online_sa-sdk-javascript-1.25.3_sensorsdata.min.js}"
+            charset="UTF-8"></script>
+    <script type="text/javascript"
+            th:src="@{/js/jquery-v3.2.1.js}"></script>
+    <script type="text/javascript"
+            th:src="@{/js/index.js}"></script>
+    <script type="text/javascript"
+            th:src="@{/js/layer.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/layer.css}"
+          id="layuicss-layer">
+    <link rel="stylesheet" type="text/css"
+          th:href="@{/css/main.css}">
+</head>
+<body>
+<meta http-equiv="mobile-agent" content="format=xhtml;url=/m/index.php">
+<script type="text/javascript">if (window.location.toString().indexOf('pref=padindex') != -1) {
+} else {
+    if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+        if (window.location.href.indexOf("?mobile") < 0) {
+            try {
+                if (/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                    window.location.href = "/m/index.php";
+                } else if (/iPad/i.test(navigator.userAgent)) {
+                } else {
+                }
+            } catch (e) {
+            }
+        }
+    }
+}</script>
+
+
+<div class="header">
+
+    <div class="header_bot">
+
+        <div class="container clearfix">
+
+            <div class="logo fl"><a href="http://www.langjingyiqi.com/">
+                <img
+                        th:src="@{/images/20180412114926_77299.png}"></a>
+            </div>
+
+            <div class="xinxi fl">
+
+                <p class="p1">专业致力于环境空气指数、气象站，仪器仪表研发</p>
+
+                <p class="p2">为广大用户提供优质的产品和完善的服务</p>
+
+            </div>
+
+            <div class="tel fr">
+
+
+                <p class="p1"></p>
+
+                <p class="p2">服务热线：13871558551<br></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="nav">
+
+        <div class="container">
+
+            <ul class="clearfix">
+
+                <li><a href="/index" target="">网站首页</a></li>
+
+
+                <li><a href="/about">关于我们</a></li>
+
+
+                <li><a href="/chanpinzhanshi">产品展示</a></li>
+
+
+                <li><a href="/xinwen">新闻动态</a></li>
+
+
+                <li><a href="/anlizhanshi">案例展示</a></li>
+
+
+                <li><a href="/rongyu">资质荣誉</a></li>
+
+
+                <li><a href="/connect">联系我们</a></li>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="banner clearfix">
+    <!--轮播图用each遍历-->
+
+    <div class="bannerx" style="height: 491.866px;">
+        <ul class="bannerxList">
+            <li th:each="lunbotu, iterStat : ${lunbotu}"
+                th:style="${iterStat.last} ? '' : 'display: none;'">
+                <a href="javascript:void(0)">
+                    <img th:src="${lunbotu.image}"
+                         style="width: 1471px; height: 491.866px;"
+                         th:alt="${lunbotu.id}">
+                </a>
+            </li>
+        </ul>
+        <ul class="bannerxBton">
+        </ul>
+    </div>
+</div>
+
+<div class="chengxin">
+
+    <div class="container clearfix">
+
+        <div class="a1 fl">
+
+            <div class="b1">诚实<span>守信</span>&nbsp;&nbsp;&nbsp;&nbsp;合作<span>共赢</span></div>
+
+            <div class="b2">Honest and trustworthy cooperation win win</div>
+
+        </div>
+
+        <div class="a2 fl clearfix">
+
+            <p class="p1 fl">关键词：</p>
+            <li style="display:inline;"><a href=""
+                                           class="fl"></a></li>
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+    function check_seachkey() {
+
+        var key = $("#seach_key").val();
+
+        if (!key) {
+
+            alert("请输入查询的关键词！！！");
+
+            return false;
+
+        }
+
+    }
+
+</script>
+
+<script type="text/javascript">
+
+    function check_seachkey() {
+
+        var key = $("#seach_key").val();
+
+        if (!key) {
+
+            alert("请输入查询的关键词！！！");
+
+            return false;
+
+        }
+
+    }
+
+</script>
+
+<div class="main">
+
+
+    <div class="pro1">
+
+        <div class="container clearfix">
+
+            <div class="cate fl">
+
+                <div class="a1">
+
+                    <p class="p1">产品展示</p>
+
+                    <p class="p2">PRODUCTS SHOW</p>
+
+                </div>
+
+                <ul class="a2">
+
+
+                    <li>
+                        <a href=""></a>
+                    </li>
+
+
+                </ul>
+
+
+                <div class="a4">
+
+                    <span style="font-size:14px;line-height:2;">地址：河北省廊坊市安次区龙河经济开发区富康道2号科技企业创新创业园二层201-205</span><br>
+
+                    <span style="font-size:14px;line-height:2;">联系人：王红春</span><br>
+
+                    <span style="font-size:14px;line-height:2;">联系电话1：13871558551</span><br>
+
+                    <span style="font-size:14px;line-height:2;">联系电话2：18733634881</span><br>
+
+                    <span style="font-size:14px;line-height:2;">电话1：0316-2806797</span><br>
+
+                    <span style="font-size:14px;line-height:2;">电话2：0316-2574981</span><br>
+
+                    <span style="font-size:14px;line-height:2;">邮箱：whc_wyp@163.com</span>
+
+                </div>
+
+            </div>
+
+            <div class="pro1list fr">
+
+                <div class="a1 clearfix">
+
+                    <img th:src="@{/images/aa6.png}"
+                         class="fl" alt="">
+                    <a class="fr" href="/chanpinzhanshi">查看更多</a>
+
+                </div>
+
+                <div class="a2">
+                    <!--                    产品展示-->
+                    <ul class="clearfix">
+                        <a th:each="dept, iterStat : ${dept}" th:if="${iterStat.index < 6}"
+                           th:href="|/chanpinzhanshi/${dept.id}|"
+                           th:title="|${dept.name}|">
+                            <li>
+                                <img th:src="|${dept.image}|"
+                                     th:alt="|${dept.name}|">
+                                <img class="b1"
+                                     th:src="|${dept.image}|"
+                                     th:alt="|${dept.name}|">
+                                <p class="p1" th:text="|${dept.name}|"></p>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="pro2">
+
+        <div class="container clearfix" style="margin-top:86px;">
+
+
+            <div class="a1 fl">
+
+                <p class="p1">品牌、产品、服务</p>
+
+                <p class="p2">公司具有一批素质优良的管理人员和技术骨干，企业管理严谨、检测手段先进、产品质量可靠。</p>
+
+                <p class="p3">First-class brand, first-class product, first-class service</p>
+
+            </div>
+
+
+            <div class="a2 fr">全国咨询热线：<span>13871558551</span></div>
+
+        </div>
+
+    </div>
+
+    <div class="pro3">
+
+        <div class="container">
+
+            <div class="a1">关于我们</div>
+
+            <div class="a2">ABOUT US</div>
+
+
+            <div class="a3 clearfix">
+
+                <div class="b1 fl">
+                    廊坊朗净仪器有限公司成立于2014年，致力于环境空气指数、气象站，仪器仪表研发，软件开发，是集产品生产、销售、安装于一体的综合型企业。公司自主研发的负氧离子监测、花粉自动监测；测霾仪、PM2.5、臭氧、VOC等大气因子监测仪；辐射量监测等各业监测仪器产品广泛应用于林业、气象、旅游景区、森林康养、环境监测等行业、研发团段紧跟前沿，占据行业技术制高点。公司致力于主攻环境监测仪器技术的自主研发，力争达到先进水平。各项环境监测系统已在国内多个知名旅游景区以及林业、气象、环境等各大行业运行应用。
+                    企业视信誉为生命，以客户为重，不断完善服务项目，满足客户需求，保证服务好。公司以先进的技术不断开发新产品，以更好的质量和更好的效率保持企业的生命力，以客户为重的经营理念实现我们对顾客的承诺。
+                    2015年以来项目分别在北京、河北、江西、浙江、江苏、陕西、海南等地安装负氧离子监测系统并建立服务站点；各地气象、园林、林区环保等部门有力地举措，建设智能化的空气站，监测系统以大数据分析，空气数字化直观的呈现给大众，贴近民心，使得设备所在之处获得大众的驻足与赞叹！
+                    ...
+                </div>
+
+                <div class="b2 fr">
+                    <img th:src="@{/images/about.png}"
+                         alt=""></div>
+
+            </div>
+
+            <a class="a4" href="/connect">查看更多</a>
+
+        </div>
+
+    </div>
+
+    <div class="pro4">
+
+        <div class="container">
+
+            <div class="a1 clearfix">
+
+                <div class="b1 fl">
+
+                    <p class="p1">CHOOSE OUR FOUR REASONS</p>
+
+                    <p class="p2">————————&nbsp;&nbsp;&nbsp;选择我们的</p>
+
+                </div>
+
+                <div class="b2 fl">四大理由</div>
+
+            </div>
+
+
+            <div class="a2">
+
+                <div class="b1 clearfix">
+
+                    <div class="d1 fl">
+
+                        <div class="e1">
+
+                            <span>专业优势</span><!--  //  PROFESSIONAL ADVANTAGE -->
+
+                        </div>
+
+                        <div class="e2">
+
+                            廊坊朗净仪器有限公司成立于2014年，为北京朗净时代环境科技有限公司旗下的控股单位，专业致力于环境空气指数、气象站。<br>
+
+                            仪器仪表研发，软件开发，是集产品生产、销售、安装于一体的综合型企业。
+
+                        </div>
+
+                    </div>
+
+                    <div class="d2 fr">
+
+                        <img th:src="@{/images/20180413084146_64102.png}"
+                             alt="">
+
+                    </div>
+
+                </div>
+
+
+                <div class="b2 clearfix">
+
+                    <div class="d2 fl">
+
+                        <img th:src="@{/images/20180413090241_51412.png}"
+                             alt="">
+
+                    </div>
+
+                    <div class="d1 fr">
+
+                        <div class="e1">
+
+                            <span>产品优势</span><!--  //  SUPPLY COMMODITY ADVANTAGE -->
+
+                        </div>
+
+                        <div class="e2">
+
+                            <p>
+
+                                公司自主研发的负氧离子监测、花粉自动监测；测霾仪、PM2.5、臭氧、VOC等大气因子监测仪；
+
+                            </p>
+
+                            <p>
+
+                                各项生态环境监测系统已在国内多个知名旅游景区以及林业、气象、环境等各大行业运行应用。
+
+                            </p>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="b3 clearfix">
+
+                    <div class="d1 fl">
+
+                        <div class="e1">
+
+                            <span>团队优势</span><!--  //  TEAM ADVANTAGE -->
+
+                        </div>
+
+                        <div class="e2">
+
+                            企业视信誉为生命，以客户为中心，不断完善服务项目，满足客户深层需求，保证服务。<br>
+
+                            公司坚持以质量诚信为原则，制造精品，奉献真诚的方针。
+
+                        </div>
+
+                    </div>
+
+                    <div class="d2 fr">
+
+                        <img th:src="@{/images/20180413090736_71982.png}"
+                             alt="">
+
+                    </div>
+
+                </div>
+
+
+                <div class="b4 clearfix">
+
+                    <div class="d2 fl">
+
+                        <img th:src="@{/images/20180413084443_17923.png}
+                             ">
+
+                    </div>
+
+                    <div class="d1 fr">
+
+                        <div class="e1">
+
+                            <span>服务优势</span><!--  //  SERVICE ADVANTAGE -->
+
+                        </div>
+
+                        <div class="e2">
+
+                            <p>
+
+                                各地气象、园林、林区环保等部门有力地举措，建设智能化的空气站，监测系统以大数据分析
+
+                            </p>
+
+                            <p>
+
+                                空气数字化直观的呈现给大众，贴近民心，使得设备所在之处获得大众的驻足与赞叹！
+
+                            </p>
+
+                            <p>
+
+                                <br>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="pro5">
+
+        <div class="container">
+
+            <div class="a1">
+
+                <p class="p1">新闻动态</p>
+
+                <p class="p3">NEWS INFORMATION</p>
+
+            </div>
+
+            <div class="a2 clearfix">
+
+
+                <div class="b1 fl clearfix">
+                    <div class="d1 fl">最新新闻</div>
+                    <ul class="fl">
+                        <a th:each="news, iterStat : ${news}" th:if="${iterStat.index < 3}"
+                           th:href="|/xinwen/${news.id}|"
+                           th:title="|${news.name}|">
+                            <li>
+                                <p th:text="|${news.name}|" class="p1"></p>
+                                <p th:text="|${news.createTime}|" class="p2">2020-08-03</p>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="b1 fl clearfix">
+                    <div class="d1 fl">最新新闻</div>
+                    <ul class="fl">
+                        <a th:each="news, iterStat : ${news}" th:if="${iterStat.index >= 3}"
+                           th:href="|/xinwen/${news.id}|"
+                           th:title="|${news.name}|">
+                            <li>
+                                <p th:text="|${news.name}|" class="p1"></p>
+                                <p th:text="|${news.createTime}|" class="p2">2020-08-03</p>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+
+
+                <div class="b2 fl">
+
+                    <img th:src="@{/images/aa13.png}"
+                         alt="">
+
+                </div>
+
+                <div class="b3 fr"></div>
+
+            </div>
+
+            <a class="a3" href="/xinwen">查看更多</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+
+        <div class="container">
+
+            <ul class="nav clearfix">
+
+                <li><a href="/index" target="">网站首页</a></li>
+
+
+                <li><a href="/about">关于我们</a></li>
+
+
+                <li><a href="/chanpinzhanshi">产品展示</a></li>
+
+
+                <li><a href="/xinwen">新闻动态</a></li>
+
+
+                <li><a href="/anlizhanshi">案例展示</a></li>
+
+
+                <li><a href="/rongyu">资质荣誉</a></li>
+
+
+                <li><a href="/connect">联系我们</a></li>
+
+
+            </ul>
+
+
+            <div class="a2"></div>
+
+            <div class="a3"><p>
+
+                <span style="line-height:2;">大气负氧离子检测仪-微型气象站-天然氧吧-森林康养-自动花粉监测仪-朗净仪器 版权所有(C)2018&nbsp;&nbsp; 备案号：<a
+                        href="https://beian.miit.gov.cn/" target="_blank"><span
+                        style="color:#FFFFFF;">冀ICP备17002451号</span></a> </span>
+
+            </p></div>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript"
+            th:src="@{/js/jquery.toTop.min.js}"></script>
+
+    <a id="GoTop"><img th:src="@{/images/下载.jpg}" alt=""></a>
+
+    <script>
+
+        $(function () {
+
+            $('#GoTop').toTop();
+
+
+        });
+
+        $(function () {
+
+            $("#link_list3 li:not(':first,:last')").css({"width": "49%", "float": "left"});
+
+            $("#link_list3 li:last").css({"clear": "both"});
+
+        });
+
+    </script>
+</div>
+</body>
+</html>

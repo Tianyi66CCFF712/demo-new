@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demonew.mapper.LunbotuMapper">
+    <delete id="deleteByid"  >
+        delete
+        from lunbotu
+        where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+        <select id="list" resultType="com.example.demonew.entity.Lunbotu">
+            select * from lunbotu
+            <where>
+                <if test="name != null and name != '' ">name like concat('%',#{name},'%') </if>
+            </where>
+        </select>
+<!--    <select id="page" resultType="com.example.demonew.entity.Emp">-->
+<!--        select * from emp-->
+<!--        <where>-->
+<!--            <if test="name != null and name != '' ">name like concat('%',#{name},'%') </if>-->
+<!--            <if test="gender != null">and gender = #{gender} </if>-->
+<!--            <if test="begin != null and end != null">and entrydate between #{begin} and #{end}</if>-->
+<!--        </where>-->
+<!--        limit #{start},#{pageSize}-->
+<!--    </select> 原始的分页查询返回的结果列表-->
+<!--    <select id="count" resultType="java.lang.Long">-->
+<!--        SELECT count(*) from emp-->
+<!--    </select> 原始的分页查询需要返回一个总记录数-->
+
+</mapper>

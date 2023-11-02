@@ -1,0 +1,312 @@
+.vtitle {
+    width: 100%;
+    float: left;
+    padding: 30px 0 30px 0;
+    background: #f1f1f1;
+    border-bottom: 1px solid #d9d9d9;
+}
+.vtitlemain {
+    height: 74px;
+    width: 350px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0px auto 0px;
+}
+.vtitlemain font {
+    color: #222c50;
+    white-space: nowrap;
+    font: 16px/1 'Arial';
+    text-transform: uppercase;
+}
+.vtitlemain span {
+    display: block;
+    margin: 20px auto 0;
+}
+.vtitlemain span b {
+    white-space: nowrap;
+    font: 24px/24px 'Microsoft Yahei';
+    overflow: hidden;
+    color: #da0c0c;
+    margin-top: -10px;
+    display: inline-block;
+    font-weight: bold;
+}
+.telbar {
+    margin-top: 10px;
+    color: #222c50;
+    font: 14px/1 'arial';
+    text-transform: uppercase;
+    text-align: center;
+}
+.pro_lanfra {
+    margin: 0 auto;
+    width: 980px;
+    height: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #4e6990;
+    line-height: 30px;
+    padding: 0 0 25px 0;
+}
+.pro_lanfra span {
+    position: relative;
+    margin: 0 0 0 6px;
+}
+.pro_lanfra a {
+    color: #222c50;
+    background: #eaeaea;
+    padding: 1px 8px;
+    border-radius: 5px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+.pro_lanfra a.promore {
+    color: #ff002a;
+}
+.fyMain {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    min-height: 400px;
+}
+.main, .fyMain {
+    width: 980px;
+    margin: 0 auto;
+    clear: both;
+    position: relative;
+}
+ul, li, dl, dt, dd, ol {
+    display: block;
+    list-style: none;
+}
+.clear {
+    clear: both;
+    height: 0px;
+    overflow: hidden;
+}
+.pro_list li {
+    width: 220px;
+    overflow: hidden;
+    height: 197px;
+    float: left;
+    margin: 0 12px 30px;
+    display: inline;
+}
+ul, li, dl, dt, dd, ol {
+    display: block;
+    list-style: none;
+}
+.pro_list li a {
+    background: #222c50;
+    display: block;
+    width: 220px;
+    position: relative;
+}
+.proimg, .proimg img {
+    float: left;
+}
+a {
+    color: #515d6b;
+}
+a {
+    text-decoration: none;
+    outline: 0;
+}
+.proname {
+    display: block;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    color: #fff;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 220px;
+    padding: 0;
+    font-size: 14px;
+}
+.product li a em{ display:none; position:absolute; border:1px solid #da0c0c; width:208px; height:153px; left:5px; top:5px;}
+.product li a:hover{ top:-30px;}
+.product li a:hover p{ background:#da0c0c;}
+.product li a:hover em{ display:block;}
+.pro_list li a:hover em {
+    display: block;
+}
+.pro_list li a em {
+    display: none;
+    position: absolute;
+    border: 1px solid #da0c0c;
+    width: 208px;
+    height: 153px;
+    left: 5px;
+    top: 5px;
+}
+.pro_list li{ width:220px; overflow:hidden; height:197px; float:left; margin:0 12px 30px; display:inline;}
+.pro_list li a{background:#222c50; display:block;width:220px; position:relative;}
+.pro_list li a em{ display:none; position:absolute; border:1px solid #da0c0c; width:208px; height:153px; left:5px; top:5px;}
+.pro_list li a:hover em{ display:block}
+.pro_list li a:hover p{ background:#da0c0c;}
+.fyMain {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    min-height: 400px;
+}
+.main, .fyMain {
+    width: 980px;
+    margin: 0 auto;
+    clear: both;
+    position: relative;
+}
+.news_list {
+    width: 980px;
+    font-size: 14px;
+}
+.news_list li {
+    float: left;
+    width: 980px;
+    line-height: 45px;
+}
+.news_list li a {
+    float: left;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #787878;
+}
+.news_list li .fl {
+    width: 800px;
+    margin-left: 6px;
+    display: inline;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 10px;
+}
+.news_list li a span {
+    cursor: pointer;
+}
+.news_list li .fr {
+    margin-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+.news_list li a span {
+    cursor: pointer;
+}
+.clear {
+    clear: both;
+    height: 0px;
+    overflow: hidden;
+}
+.viewcon {
+    background: #fff;
+    overflow: hidden;
+    margin: 0 12px 36px;
+    width: 940px;
+    display: inline;
+    word-break: break-all;
+    color: #555;
+    font-size: 14px;
+    float: left;
+    padding: 0px 20px 20px;
+    line-height: 30px;
+    font-size: 14px;
+    min-height: 500px;
+    _height: 500px;
+}
+.viewcon h2 {
+    font-size: 18px;
+    font-family: 'Microsoft Yahei';
+    font-weight: normal;
+    color: #222c50;
+    text-align: left;
+}
+.title_s {
+    float: left;
+    width: 980px;
+    text-align: left;
+    border-bottom: 1px solid #e4e4e4;
+    color: #777;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 30px;
+    padding: 10px 0 0 0;
+    display: inline;
+    margin-bottom: 20px;
+}
+.title_s .divleft {
+    float: left;
+}
+.center {
+    text-align: center;
+}
+.viewcon .center img {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: auto;
+    max-width: 600px;
+    _width: expression(this.width > 600 ? "600px" : this.width);
+    overflow: hidden;
+}
+.newsview {
+    color: #555;
+    display: inline;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    line-height: 28px;
+    float: left;
+}
+.newsview img{max-width: 100%;}
+
+.viewpage {
+    background: #eee;
+    width: 100%;
+    float: left;
+}
+.main_r_nav {
+    float: left;
+    width: 700px;
+    height: 66px;
+    padding: 10px 0;
+    font-size: 14px;
+    margin-left: 10px;
+    display: inline;
+}
+.main_r_nav a {
+    color: #777777;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 30px;
+}
+.returnlist {
+    width: 50px;
+    height: 56px;
+    padding: 15px 18px;
+    display: inline;
+    float: right;
+    color: #fff;
+    line-height: 30px;
+    font-size: 12px;
+    background: #222c50;
+}
+.returnlist a {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-family: "microsoft yahei";
+    width: 100%;
+    display: block;
+}
+.title_s .divright {
+    float: right;
+    padding: 0px 0 0 0;
+    width: 220px;
+}

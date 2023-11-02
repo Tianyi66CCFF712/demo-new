@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demonew.mapper.HonorMapper">
+    <insert id="insert">
+        insert into  honor (name,content,create_time,update_time,image) values (#{name},#{content},#{createTime},#{updateTime},#{image})
+    </insert>
+    <update id="update">
+        update honor set name = #{name},content=#{content} where id =#{id}
+    </update>
+    <delete id="deleteById">
+        delete
+        from honor
+        where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="list" resultType="com.example.demonew.entity.Honor">
+        select * from honor
+        <where>
+            <if test="name != null and name != '' ">name like concat('%',#{name},'%') </if>
+        </where>
+    </select>
+    <select id="search" resultType="com.example.demonew.entity.Honor">
+        SELECT * from honor where id=(#{id})
+    </select>
+</mapper>
