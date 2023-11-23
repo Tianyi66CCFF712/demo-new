@@ -25,11 +25,7 @@ public class UserController {
     @GetMapping
     public Result page(@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "10") Integer pageSize,String name,Integer gender, @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate begin ,@DateTimeFormat(pattern = "yyyy-MM-dd")LocalDate end) {
         PageBean pageBean = userService.page(page, pageSize,name, gender, begin,end);
-
-
         log.info("当前页是{},每页记录数是{},名字是{},性别是{},开始日期是{}，结束日期是{}",page,pageSize,name,gender,begin,end);
-
-
         return Result.success(pageBean);
     }
     @DeleteMapping("/{ids}")

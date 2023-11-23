@@ -9,9 +9,9 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PageBean {
+public class PageBean<T> {
 
     public Long total;//总记录数
-    public Object rows;//查询表结果
+    public List<T> rows;//查询表结果
 
 }

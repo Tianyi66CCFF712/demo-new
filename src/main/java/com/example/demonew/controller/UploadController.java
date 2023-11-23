@@ -41,7 +41,7 @@ public class UploadController {
 //        String newfilename = UUID.randomUUID().toString()+extname;
 //        log.info("新的文件名"+newfilename);
         String newfilename = System.currentTimeMillis() + filename;
-        image.transferTo(new File(AnlifileSavePath + newfilename));
+        image.transferTo(new File(AnlifileSavePath + newfilename));//保存上传的文件到这个目录下
         String url = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + "/anli/"  + newfilename;
         log.info("url的request.getScheme的东西{},url的request.getServerName的东西{},url的request.getServerPort的东西{}",request.getScheme(),request.getServerName(),request.getServerPort());
 //        image.transferTo(new File("C:\\kindupload\\" + newfilename));

@@ -1,6 +1,7 @@
 package com.example.demonew.service.impl;
 
 
+import com.alibaba.fastjson.JSONObject;
 import com.example.demonew.utils.PageBean;
 import com.example.demonew.utils.Result;
 import com.example.demonew.entity.User;
@@ -31,8 +32,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void delete(List<Integer> ids) {
-        userMapper.deleteByid(ids);
+//        userMapper.deleteByid(ids);
 //        System.out.println(ids);
+        userMapper.deleteBatchIds(ids);
     }
 
     @Override
@@ -44,18 +46,31 @@ public class UserServiceImpl implements UserService {
             return Result.success();
         }
         else return Result.error("用户名已被占用");
+//        try {
+//            user.setCreateTime(LocalDateTime.now());
+//            user.setUpdateTime(LocalDateTime.now());
+//            userMapper.insert(user);
+//            return Result.success();
+//        }
+//        catch (Exception e) {//jwt解析失败
+//            e.printStackTrace();
+//            Result error = Result.error("用户名已被占用");
+//            return error;
+//        }
     }
 
     @Override
     public void updata(User user) {
         user.setUpdateTime(LocalDateTime.now());
-        userMapper.update(user);
+//        userMapper.update(user);
+        userMapper.updateById(user);
     }
 
     @Override
     public User search(Integer id) {
-
-        return userMapper.search(id);
+//
+//        return userMapper.search(id);
+        return  userMapper.selectById(id);
     }
 
     @Override
